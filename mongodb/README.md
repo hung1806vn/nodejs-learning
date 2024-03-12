@@ -3,6 +3,19 @@
 [Nodejs environment variables](https://viblo.asia/p/lam-viec-voi-environment-variables-trong-nodejs-maGK7ONeKj2) \
 [Nodejs apis với mongodb](https://viblo.asia/p/crud-voi-nodejs-express-va-mongodb-RnB5pxV25PG) 
 
+## INDEXING
+```
+100 id
+a muốn tìm document với id 25
+for cơ bản thì 25 lần
+index chỉ 2 lần
+1[địa chỉ doc 1] ... 50[địa chỉ doc 50] ... 100[địa chỉ doc 100]
+1[địa chỉ doc 1] ... 25[địa chỉ doc 25] ... 50[địa chỉ doc 50]
+100/2 
+50/2 -> 25[địa chỉ doc 25]
+```
+
+## TRANSACTION ???
 
 ## Rest APIs CRUD cho product
 ```
@@ -10,7 +23,7 @@
 /product        GET     LẤY TẤT CẢ PRODUCT
 /product/:id    GET     LẤY PRODUCT THEO ID
 /product/:id    UPDATE  CẬP NHẬT PRODUCT THEO ID
-/product/:id    DELETE  CẬP NHẬT PRODUCT THEO ID
+/product/:id    DELETE  XÓA PRODUCT THEO ID
 
 {
     "name": "name",
