@@ -30,7 +30,10 @@ index chỉ 2 lần
     "price": 10000,
     "desc": "description"
 }
+```
 
+## Filter For get all product API
+```
 Độ khó medium
 Dựa vào api get all product mình cần filter theo name hoặc price
 /product        GET     LẤY TẤT CẢ PRODUCT
@@ -38,7 +41,10 @@ request param:
 min=0
 max=100000
 name="name"
+```
 
+## Quản lý order
+```
 Độ khó hard
 viết 1 api để tạo order theo product
 /checkout        POST    TẠO ORDER
