@@ -30,4 +30,62 @@ index chỉ 2 lần
     "price": 10000,
     "desc": "description"
 }
+
+Độ khó medium
+Dựa vào api get all product mình cần filter theo name hoặc price
+/product        GET     LẤY TẤT CẢ PRODUCT
+request param:
+min=0
+max=100000
+name="name"
+
+Độ khó hard
+viết 1 api để tạo order theo product
+/checkout        POST    TẠO ORDER
+Request body:
+[
+    {
+        "productId": "productId1",
+        "quantity": 3
+    },
+    {
+        "productId": "productId2",
+        "quantity": 3
+    }
+]
+
+viết 1 api để get all orders
+/ORDER        GET     LẤY TẤT CẢ ORDER
+Response
+[
+    // ORDER COLLECTION
+    {
+        "orderId": 1,
+        // ORDER DETAIL COLLECTION
+        "orderDetails": [
+            {
+                "orderDetailId": 1,
+                "quantity": 3,
+                // PRODUCT COLLECTION
+                "product": {
+                    "id": 1,
+                    "name": "name",
+                    "price": 10000,
+                    "desc": "description"
+                }
+            },
+            {
+                "orderDetailId": 2,
+                "quantity": 3,
+                "product": {
+                    "id": 2,
+                    "name": "name",
+                    "price": 10000,
+                    "desc": "description"
+                }
+            }
+        ]
+    },
+    ...
+]
 ```
